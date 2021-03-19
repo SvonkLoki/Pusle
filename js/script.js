@@ -109,7 +109,7 @@ $(document).ready(function() {
         }
     });
 
-    $('a[href^="#"]').on('click', function() {
+    $('a[href="#up"]').on('click', function() {
         const _href = $(this).attr('href');
         $('html, body').animate({ scrollTop: $(_href).offset().top + 'px' });
         return false;
