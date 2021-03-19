@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a class="header__logo">
@@ -63,7 +64,7 @@
                     <div class="advantages__descr">Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
                 </div>
                 <div class="advantages__block">
-                    <div class="advantages__icon"><img src="icons/advantages/heart.png" alt="heart"></div>
+                    <div class="advantages__icon"><img class="advantages__icon_animated" src="icons/advantages/heart.png" alt="heart"></div>
                     <div class="advantages__subheader">Заботимся о здоровье</div>
                     <div class="advantages__descr">Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
                     </div>
@@ -94,17 +95,17 @@
         </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div><img src="img/slide_1.jpg" alt="slede"></div>
                 <div><img src="img/slide_2.jpg" alt="slede"></div>
                 <div><img src="img/slide_3.jpg" alt="slede"></div>
             </div>
-            <button type="button" class="prev"><img src="icons/left.svg"></button>
-            <button type="button" class="next"><img src="icons/right.svg"></button>
+            <button type="button" class="prev"><img src="icons/left.svg" alt="left"></button>
+            <button type="button" class="next"><img src="icons/right.svg" alt="right"></button>
         </div>
-    </section>
+    </div>
 
     <section class="catalog">
         <div class="container">
@@ -358,7 +359,7 @@
     <section class="feed">
         <div class="container">
             <div class="title">Отзывы клиентов</div>
-            <div class="feed__item">
+            <div class="feed__item wow animate__animated animate__fadeInUp">
                 <img src="img/feed_1.png" alt="" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Ирина Иванченко</div>
@@ -369,7 +370,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feed__item">
+            <div class="feed__item wow animate__animated animate__fadeInUp">
                 <img src="img/feed_2.png" alt="Иван Сёмочкин  " class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Иван Сёмочкин </div>
@@ -380,7 +381,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feed__item">
+            <div class="feed__item wow animate__animated animate__fadeInUp">
                 <img src="img/feed_3.png" alt="Юлия Дашкина  " class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Юлия Дашкина </div>
@@ -440,9 +441,14 @@
         </div>
     </div>
 
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up">
+    </a>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/script.js"></script>
 </body>
