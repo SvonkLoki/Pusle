@@ -134,20 +134,25 @@
                 margin-left: 00px;
                 transform: translateX(-100%);
             }
-            li {
-                position: relative;
-                color: #555555;
-                font-size: 14px;
-                font-weight: 300;
-                margin-bottom: 20px;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 5px;
-                    height: 5px;
-                    background-color: $main-color;
-                    left: -14px;
-                    top: 8px;
+            ul {
+                padding-left: 13px;
+                margin-bottom: 0;
+                list-style-type: none;
+                li {
+                    position: relative;
+                    color: #555555;
+                    font-size: 14px;
+                    font-weight: 300;
+                    margin-bottom: 20px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 5px;
+                        height: 5px;
+                        background-color: $main-color;
+                        left: -14px;
+                        top: 8px;
+                    }
                 }
             }
         }
