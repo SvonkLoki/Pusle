@@ -1,5 +1,6 @@
 'use strict';
 $(document).ready(function() {
+    //! Slider
     const slider = tns({
         container: '.carousel__inner',
         items: 1,
@@ -15,14 +16,14 @@ $(document).ready(function() {
     document.querySelector('.next').addEventListener('click', function() {
         slider.goTo('next');
     });
-
+    //! Tabs
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
         $(this)
             .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
             .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active')
             .eq($(this).index()).addClass('catalog__content_active');
     });
-
+    //! Cards show/hide
     function toggleSlide(item) {
         $(item).each(function(i) {
             $(this).on('click', function(e) {
@@ -51,7 +52,7 @@ $(document).ready(function() {
             $('.overlay, #order').fadeIn('slow');
         });
     });
-
+    // Valid forms
     function validateForm(form) {
         $(form).validate({
             rules: {
@@ -84,7 +85,7 @@ $(document).ready(function() {
     validateForm('#consultation-form');
 
     $('input[name=phone]').mask('+7 (999) 999-99-99');
-
+    // Sending data from form to mailer
     $('form').submit(function(e) {
         e.preventDefault();
         $.ajax({
